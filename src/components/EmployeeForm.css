@@ -1,0 +1,116 @@
+/* Container */
+.employee-form {
+  max-width: 500px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-family: system-ui, sans-serif;
+  line-height: 1.5;
+}
+
+/* Form text */
+.employee-form p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  color: #222; /* Good contrast */
+}
+
+/* Labels */
+.employee-form label {
+  display: block;
+  margin-top: 1rem;
+  font-weight: 600;
+  color: #111; /* Dark enough for WCAG AA */
+}
+
+/* Inputs */
+.employee-form input[type="text"],
+.employee-form input[type="email"],
+.employee-form input[type="radio"] {
+  margin-top: 0.25rem;
+}
+
+.employee-form input[type="text"],
+.employee-form input[type="email"],
+.employee-form input[type="password"],
+.employee-form input[type="search"],
+.employee-form input[type="url"],
+.employee-form input[type="tel"],
+.employee-form input[type="number"] {
+  width: 100%;
+  padding: 0.625rem;
+  font-size: 1rem;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  background-color: #fff;
+  color: #000;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Focus states (accessible, visible, WCAG AA compliant) */
+.employee-form input:focus,
+.employee-form button:focus {
+  outline: none;
+  border-color: #005fcc; /* High contrast blue */
+  box-shadow: 0 0 0 3px rgba(0, 95, 204, 0.4);
+}
+
+/* Error messages */
+.error {
+  display: block;
+  margin-top: 0.25rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #b00020; /* WCAG AA red */
+}
+
+/* Fieldset and legend */
+.employee-form fieldset {
+  margin-top: 1.5rem;
+  border: none;
+  padding: 0;
+}
+
+.employee-form legend {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #111;
+}
+
+/* Radio buttons */
+.employee-form input[type="radio"] {
+  margin-right: 0.5rem;
+}
+
+.employee-form label[for="female"],
+.employee-form label[for="male"],
+.employee-form label[for="other"] {
+  display: inline-block;
+  margin-right: 1rem;
+}
+
+/* Submit button */
+.employee-form button {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  background-color: #005fcc; /* Accessible blue */
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.employee-form button:hover {
+  background-color: #0041a8; /* Darker hover */
+}
+
+.employee-form button:disabled {
+  background-color: #999;
+  cursor: not-allowed;
+}
