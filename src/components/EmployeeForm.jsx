@@ -46,6 +46,12 @@ const EmployeeForm = () => {
     e.preventDefault();
     console.log(formData);
     if (validateForm(formData)) alert("Form submitted successfully!");
+    setFormData({
+      name: "",
+      email: "",
+      designation: "",
+      gender: "",
+    })
   };
   return (
     <div className="employee-form">
@@ -59,7 +65,7 @@ const EmployeeForm = () => {
           value={formData.name}
           onChange={handleChange}
           required
-          aria-describedby={errors.name?"name-error":""}
+          aria-describedby={errors.name ? "name-error" : ""}
         />
         {errors.name && (
           <span id="name-error" role="alert" style={{ color: "red" }} className="error">
@@ -74,7 +80,7 @@ const EmployeeForm = () => {
           value={formData.email}
           onChange={handleChange}
           required
-          aria-describedby={errors.email?"email-error":""}
+          aria-describedby={errors.email ? "email-error" : ""}
         />
         {errors.email && (
           <span id="email-error" role="alert" style={{ color: "red" }} className="error">
@@ -89,7 +95,7 @@ const EmployeeForm = () => {
           value={formData.designation}
           onChange={handleChange}
           required
-          aria-describedby={errors.designation?"designation-error":""}
+          aria-describedby={errors.designation ? "designation-error" : ""}
         />
         {errors.designation && (
           <span id="designation-error" role="alert" style={{ color: "red" }} className="error">
@@ -112,7 +118,7 @@ const EmployeeForm = () => {
           <input
             id="male"
             name="gender"
-           
+
             type="radio"
             value="male"
             checked={formData.gender === "male"}
@@ -124,14 +130,14 @@ const EmployeeForm = () => {
             name="gender"
             type="radio"
             value="other"
-            
+
             onChange={handleChange}
             checked={formData.gender === "other"}
-         
+
           />
           {errors.gender && (
             <span id="gender-error" role="alert" style={{ color: "red" }}
-             className="error">
+              className="error">
               {errors.gender}
             </span>
           )}
